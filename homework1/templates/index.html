@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>Loan Program Application</title>
+</head>
+
+<body>
+    <h1>New Applicants</h1>
+
+    <!-- Add an applicant -->
+    <div id="addApplicant">
+        <h2>Add an Applicant</h2>
+        <input type="text" id="applicantName" placeholder="Name">
+        <input type="text" id="applicantZipcode" placeholder="Zipcode">
+        <div id="errorMessage" style="color:red; font-weight: bold;"></div>
+        <button onclick="addApplicant()">Add Applicant</button>
+    </div>
+
+    <!-- Check status -->
+    <div id="checkStatus">
+        <h2>Check Status of Application</h2>
+        <input type="text" id="applicationNumber" placeholder="Application Number">
+        <button onclick="checkApplicationNum()">Check Application</button>
+    </div>
+    <div id="statusMessage"></div> 
+
+    <!-- Change status -->
+    <div id="changeStatus">
+        <h2>Change Status of Application</h2>
+        <input type="text" id="applicantID" placeholder="Member ID">
+        <select id="statusDropdown">
+            <option value="not_found">Not Found</option>
+            <option value="received">Received</option>
+            <option value="processing">Processing</option>
+            <option value="accepted">Accepted</option>
+            <option value="rejected">Rejected</option> <!-- Fixed typo -->
+        </select>
+        <button onclick="changeApplicationStatus()">Update Status</button>
+    </div>
+    <div id="changeStatusMessage"></div>
+
+
+    
+    <div id="userList"></div>
+    <h2>Display all users</h2>
+    <div>
+        <button id="showAddApplicantsButton" onclick="showAllUsers()">Show All Users</button> 
+    </div>
+    
+
+    
+    <div id="allusers"></div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
