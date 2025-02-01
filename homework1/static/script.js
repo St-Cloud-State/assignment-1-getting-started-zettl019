@@ -3,7 +3,7 @@ const userIDs = [];
 
 // Function to add a user to the list and send it to the server
 function addApplicant() {
-    const applicantName = document.getElementById('applicantName').value.trim();
+    const applicantName = document.getElementById('applicantName').value.trim(); 
     const applicantZipcode = document.getElementById('applicantZipcode').value.trim();
     const errorMessageDiv = document.getElementById('errorMessage');
     if(!applicantName || !applicantZipcode){
